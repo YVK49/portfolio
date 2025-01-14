@@ -1,0 +1,150 @@
+body{
+  font-family: "Jura", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+}
+nav{
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    list-style-type: none;
+    margin: 40px;
+}
+nav ul li a{
+    color:rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+}
+nav ul li a:hover{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    transition-duration: 0.25s;
+}
+.div-1{
+    text-align: center;
+    margin-top: 200px;
+}
+.div-1 img{
+    height: 500px;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.div-2{
+    margin-top: 500px;
+    margin-bottom: 500px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.div-2 h3{
+    color: rgb(44, 43, 43);
+    width: fit-content;
+    border-bottom: 1px solid white;
+}
+#div-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center; 
+}
+#div-4 div{
+    padding: 20px;
+    width: 150px;
+    background-color: rgb(44, 43, 43);
+    color: rgb(233, 233, 233);
+    margin: 30px;
+    text-align: center;
+    display: block;
+}
+#div-5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center; 
+}
+#div-5 div{
+    padding: 20px;
+    height: 130px;
+    width: 150px;
+    background-color: rgb(44, 43, 43);
+    color: rgb(255, 255, 255);
+    margin: 30px;
+    text-align: center;
+    display: block;
+}
+form{
+    background-color: rgb(44, 43, 43);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+input{
+    height: 30px;
+    width: 900px;
+    margin: 20px;
+    font-family: "Jura", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+button{
+    background-color: rgb(228, 225, 225);
+    color: rgb(44, 43, 43);
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;  
+    margin: 20px;
+}
+button:hover{
+    background-color: rgb(44, 43, 43);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 20px;
+}
+#box{
+    background-color: white;
+    color: rgb(44, 43, 43);
+    padding: 30px;
+}
+.heading{
+    text-align: center;
+}
+html{
+    scroll-behavior: smooth;
+}
+#skills{
+    margin-top: 500px;
+    margin-bottom: 500px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+#contact{
+    margin-top: 500px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+#last{
+    background-color: rgb(44, 43, 43);
+}
