@@ -2,7 +2,7 @@
 <html lang = "en" style = "background-color: rgb(44, 43, 43);">
     <head>
         <title>vamshi.yamsani</title>
-        <meta name = "viewport" content = "width=device-width intial-scale = 1.0">
+        <meta name = "viewport" content = "width=device-width">
         <meta charset="utf-8">
         <link rel = "stylesheet" href = "index.css">
         <script src = "index.js"></script>
@@ -14,13 +14,19 @@
     </head>
     <body>
         <nav>
-            <ul>
-                <li><a href = "#home" title = "home"><i class="fa-solid fa-house"></i></a></li>
-                <li><a href = "#about" title = "about"><i class="fa-solid fa-address-card"></i></a></li>
-                <li><a href = "#abilities" title = "abilities"><i class="fa-solid fa-laptop"></i></a></li>
-                <li><a href = "#contact" title = "contact"><i class="fa-solid fa-address-book"></i></a></li>
-            </ul>
-        </nav>
+            <div class="nav-container">
+                <a href="#" class="logo">Vamshi</a>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#home" title="home"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="#about" title="about"><i class="fa-solid fa-address-card"></i></a></li>
+                    <li><a href="#abilities" title="abilities"><i class="fa-solid fa-laptop"></i></a></li>
+                    <li><a href="#contact" title="contact"><i class="fa-solid fa-address-book"></i></a></li>
+                </ul>
+            </div>
+        </nav>        
         <div class = "div-1" id = "home">
             <h1>I'am vamshi krishna</h1>
             <h3>web developer | graphic designer | marketing management | digital content expertise | content management</h3>
