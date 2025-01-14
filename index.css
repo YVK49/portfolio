@@ -1,150 +1,249 @@
-body{
-  font-family: "Jura", serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  color: white;
-}
-nav{
-    text-align: center;
-}
-nav ul li {
-    display: inline;
-    list-style-type: none;
-    margin: 40px;
-}
-nav ul li a{
-    color:rgb(255, 255, 255);
-    padding: 10px;
-    border-radius: 10px;
-}
-nav ul li a:hover{
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    transition-duration: 0.25s;
-}
-.div-1{
-    text-align: center;
-    margin-top: 200px;
-}
-.div-1 img{
-    height: 500px;
-}
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: translateY(-100px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-.div-2{
-    margin-top: 500px;
-    margin-bottom: 500px;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-}
-.div-2 h3{
-    color: rgb(44, 43, 43);
-    width: fit-content;
-    border-bottom: 1px solid white;
-}
-#div-4{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center; 
-}
-#div-4 div{
-    padding: 20px;
-    width: 150px;
-    background-color: rgb(44, 43, 43);
-    color: rgb(233, 233, 233);
-    margin: 30px;
-    text-align: center;
-    display: block;
-}
-#div-5{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center; 
-}
-#div-5 div{
-    padding: 20px;
-    height: 130px;
-    width: 150px;
-    background-color: rgb(44, 43, 43);
-    color: rgb(255, 255, 255);
-    margin: 30px;
-    text-align: center;
-    display: block;
-}
-form{
-    background-color: rgb(44, 43, 43);
-    color: white;
-    padding: 30px;
-    text-align: center;
-}
-input{
-    height: 30px;
-    width: 900px;
-    margin: 20px;
-    font-family: "Jura", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(0, 0, 0);
-    padding: 10px;
-}
-button{
-    background-color: rgb(228, 225, 225);
-    color: rgb(44, 43, 43);
-    border-radius: 10px;
-    border: none;
-    padding: 10px;
-    padding-left: 25px;
-    padding-right: 25px;  
-    margin: 20px;
-}
-button:hover{
-    background-color: rgb(44, 43, 43);
-    color: rgb(255, 255, 255);
-    border-radius: 10px;
-    border: none;
-    padding: 10px;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin: 20px;
-}
-#box{
-    background-color: white;
-    color: rgb(44, 43, 43);
-    padding: 30px;
-}
-.heading{
-    text-align: center;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 html{
     scroll-behavior: smooth;
 }
-#skills{
-    margin-top: 500px;
-    margin-bottom: 500px;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+body {
+    font-family: 'Jura', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
-#contact{
-    margin-top: 500px;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+.logo{
+    color: white;
+    text-decoration: none;
 }
-#last{
-    background-color: rgb(44, 43, 43);
+/* Navigation Bar */
+nav {
+    background-color: #1f1f1f;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+nav ul li a[href*="vamshi"] {
+    color: #ffffff;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    display: hidden;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1f1f1f;
+        display: none;
+        padding: 1rem 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .toggle-btn {
+        display: none;
+    }
+}
+
+/* Hero Section */
+.div-1 {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.div-1 h1 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    animation: slide-in 1s ease-in-out;
+}
+
+.div-1 h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #bbbbbb;
+}
+
+.div-1 img {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    border: 3px solid #00bcd4;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* About Section */
+.div-2 {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.div-2 h1 {
+    font-size: 2rem;
+    color: #00bcd4;
+}
+
+.div-2 h3 {
+    margin-top: 1rem;
+    color: #bbbbbb;
+}
+
+/* Skills Section */
+#skills {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#skills h1 {
+    font-size: 2rem;
+    color: #00bcd4;
+}
+
+.w3-wide {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.w3-white {
+    background-color: #333333;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+.w3-dark-grey {
+    height: 28px;
+    background-color: #00bcd4;
+    color: #ffffff;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+/* Projects and Experience Section */
+#skills .heading {
+    margin-top: 4rem;
+    color: #00bcd4;
+}
+
+#div-4, #div-5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+#div-4 div, #div-5 div {
+    background-color: #1f1f1f;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    color: #bbbbbb;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+#div-4 div:hover, #div-5 div:hover {
+    transform: translateY(-10px);
+    background-color: #00bcd4;
+    color: #ffffff;
+}
+
+/* Contact Section */
+#contact {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#contact h1 {
+    font-size: 2rem;
+    color: #00bcd4;
+}
+
+#contact form {
+    margin-top: 2rem;
+}
+
+#contact input, #contact button {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact input {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+#contact button {
+    background-color: #00bcd4;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #0097a7;
 }
